@@ -21,6 +21,7 @@ Latte Softworks and qweery | Lucide Icons And Material Icons
 kirill9655 | Loading Circle
 Deity/dp4pv/x64x70 | Certain Scripting and Testing ig
 
+Modified by darkmoonhub
 ]]
 
 local Release = "Made By darkmoonhub"
@@ -6151,7 +6152,7 @@ function Luna:CreateWindow(WindowSettings)
 			Title.TextTransparency = 1
 			TweenService:Create(Title, TweenInfo.new(0.4, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
 
-			Tab:CreateSection("Config Creator")
+			Tab:CreateSection("Configs Creator")
 
 			Tab:CreateInput({
 				Name = "Config Name",
@@ -6416,23 +6417,22 @@ function Luna:CreateWindow(WindowSettings)
 			Title.TextTransparency = 1
 			TweenService:Create(Title, TweenInfo.new(0.4, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {TextTransparency = 0}):Play()
 
-			Tab:CreateSection("Custom Editor")
+			Tab:CreateSection("Custom Effect Editor")
 
 			local c1cp = Tab:CreateColorPicker({
-				Name = "Color 1",
-				Color = Color3.fromRGB(117, 164, 206),
-			}, "LunaInterfaceSuitePrebuiltCPC1") -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Name = "Color Effect 1",
+	Color = Color3.fromRGB(200, 100, 255),
+}, "LunaInterfaceSuitePrebuiltCPC1")
 
-			local c2cp = Tab:CreateColorPicker({
-				Name = "Color 2",
-				Color = Color3.fromRGB(123, 201, 201),
-			}, "LunaInterfaceSuitePrebuiltCPC2")
+local c2cp = Tab:CreateColorPicker({
+	Name = "Color Effect 2",
+	Color = Color3.fromRGB(180, 60, 255), 
+}, "LunaInterfaceSuitePrebuiltCPC2")
 
-			local c3cp = Tab:CreateColorPicker({
-				Name = "Color 3",
-				Color = Color3.fromRGB(224, 138, 184),
-			}, "LunaInterfaceSuitePrebuiltCPC3") 
-
+local c3cp = Tab:CreateColorPicker({
+	Name = "Color Effect 3",
+	Color = Color3.fromRGB(255, 80, 250), 
+}, "LunaInterfaceSuitePrebuiltCPC3")
 			task.wait(1)
 
 			c1cp:Set({
