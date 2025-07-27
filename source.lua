@@ -2264,7 +2264,6 @@ function Luna:CreateWindow(WindowSettings)
 	Main.Title.Title.Text = WindowSettings.Name
 	Main.Title.subtitle.Text = WindowSettings.Subtitle
 	Main.Logo.Image = "rbxassetid://" .. WindowSettings.LogoID
-	Main.Logo.ImageColor3 = Color3.fromRGB(170, 0, 255)
 	Main.Visible = true
 	Main.BackgroundTransparency = 1
 	Main.Size = MainSize
@@ -2281,6 +2280,56 @@ function Luna:CreateWindow(WindowSettings)
 	LoadingFrame.Frame.Frame.Title.Text = WindowSettings.LoadingTitle
 	LoadingFrame.Frame.Frame.Subtitle.Text = WindowSettings.LoadingSubtitle
 	LoadingFrame.Version.Text = LoadingFrame.Frame.Frame.Title.Text == "Made By DarkMoonHub" and Release or "Made By DarkMoonHub"
+
+
+local Logo = Main.Logo
+
+task.spawn(function()
+	local colors = {
+		Color3.fromRGB(178, 102, 255),
+		Color3.fromRGB(204, 153, 255),
+		Color3.fromRGB(153, 51, 255),
+		Color3.fromRGB(191, 128, 255),
+		Color3.fromRGB(170, 0, 255),
+		Color3.fromRGB(221, 160, 255),
+		Color3.fromRGB(185, 85, 255),
+		Color3.fromRGB(200, 100, 255),
+		Color3.fromRGB(180, 0, 255),
+		Color3.fromRGB(204, 102, 255),
+		Color3.fromRGB(189, 40, 255),
+		Color3.fromRGB(210, 130, 255),
+		Color3.fromRGB(222, 100, 255),
+		Color3.fromRGB(192, 64, 255),
+		Color3.fromRGB(163, 80, 255),
+		Color3.fromRGB(215, 115, 255),
+		Color3.fromRGB(145, 40, 255),
+		Color3.fromRGB(199, 91, 255),
+		Color3.fromRGB(182, 58, 255),
+		Color3.fromRGB(230, 120, 255),
+		Color3.fromRGB(200, 90, 255),
+		Color3.fromRGB(216, 128, 255),
+		Color3.fromRGB(160, 60, 255),
+		Color3.fromRGB(170, 90, 255),
+		Color3.fromRGB(195, 70, 255),
+		Color3.fromRGB(210, 95, 255),
+		Color3.fromRGB(175, 75, 255),
+		Color3.fromRGB(205, 85, 255),
+		Color3.fromRGB(140, 60, 255),
+		Color3.fromRGB(225, 100, 255),
+		Color3.fromRGB(155, 85, 255),
+		Color3.fromRGB(188, 68, 255),
+	}
+
+	while true do
+		for _, color in ipairs(colors) do
+			local tween = TweenService:Create(Logo, TweenInfo.new(0.6, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut), {
+				ImageColor3 = color
+			})
+			tween:Play()
+			tween.Completed:Wait()
+		end
+	end
+end)
 
 	Navigation.Player.icon.ImageLabel.Image = Players:GetUserThumbnailAsync(Players.LocalPlayer.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size48x48)
 	Navigation.Player.Namez.Text = Players.LocalPlayer.DisplayName
