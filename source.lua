@@ -2264,6 +2264,7 @@ function Luna:CreateWindow(WindowSettings)
 	Main.Title.Title.Text = WindowSettings.Name
 	Main.Title.subtitle.Text = WindowSettings.Subtitle
 	Main.Logo.Image = "rbxassetid://" .. WindowSettings.LogoID
+	Main.Logo.ImageColor3 = Color3.fromRGB(170, 0, 255)
 	Main.Visible = true
 	Main.BackgroundTransparency = 1
 	Main.Size = MainSize
