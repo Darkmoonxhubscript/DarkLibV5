@@ -24,7 +24,7 @@ Deity/dp4pv/x64x70 | Certain Scripting and Testing ig
 Modified by darkmoonhub
 ]]
 
-local Release = "Made By darkmoonhub"
+local Release = "Roblox Scripts"
 
 local Luna = { Folder = "Luna", Options = {}, ThemeGradient = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(117, 164, 206)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(123, 201, 201)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(224, 138, 175))} }
 
@@ -2279,7 +2279,7 @@ function Luna:CreateWindow(WindowSettings)
 
 	LoadingFrame.Frame.Frame.Title.Text = WindowSettings.LoadingTitle
 	LoadingFrame.Frame.Frame.Subtitle.Text = WindowSettings.LoadingSubtitle
-	LoadingFrame.Version.Text = LoadingFrame.Frame.Frame.Title.Text == "Made By DarkMoonHub" and Release or "Made By DarkMoonHub"
+	LoadingFrame.Version.Text = LoadingFrame.Frame.Frame.Title.Text == "Roblox Scripts" and Release or "Roblox Scripts"
 
 
 local Logo = Main.Logo
